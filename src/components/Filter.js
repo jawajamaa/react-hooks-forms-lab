@@ -1,8 +1,7 @@
 import React from "react";
 
-// function handleOnChange 
 
-function Filter({ onCategoryChange, searchChange, onSearchChange }) {
+function Filter({ onCategoryChange, search, onSearchChange }) {
   return (
     <div className="Filter">
       <input 
@@ -10,13 +9,13 @@ function Filter({ onCategoryChange, searchChange, onSearchChange }) {
       name="search" 
       placeholder="Search..." 
       onChange = { onSearchChange }
-      value = { searchChange }
+      value = { search }
       />
       <select name="filter" onChange={onCategoryChange}>
-        <option value="All">Filter by category</option>
-        <option value="Produce">Produce</option>
-        <option value="Dairy">Dairy</option>
-        <option value="Dessert">Dessert</option>
+        <option value= "All">Filter by category</option>
+        <option value= "Produce">Produce</option>
+        <option value= "Dairy">Dairy</option>
+        <option value= "Dessert">Dessert</option>
       </select>
     </div>
   );
